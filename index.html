@@ -4,45 +4,259 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=h, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
   <body>
     <h1>Привіт</h1>
+    <div class="example">
+      <form>
+        <p>Choose a color:</p>
+        <label>
+          <input type="radio" name="color" value="red" />
+          Red
+        </label>
+        <label>
+          <input type="radio" name="color" value="white" checked />
+          White
+        </label>
+        <label>
+          <input type="radio" name="color" value="green" />
+          Green
+        </label>
+        <p>Select size:</p>
+        <label>
+          <input type="radio" name="size" value="sm" />
+          Small
+        </label>
+        <label>
+          <input type="radio" name="size" value="md" />
+          Medium
+        </label>
+        <label>
+          <input type="radio" name="size" value="lg" checked />
+          Large
+        </label>
+      </form>
+    </div>
 
-    <table>
-      <caption>
-        What is the difference between block, inline and inline-block
-      </caption>
-      <thead>
-        <tr>
-          <th>/</th>
-          <th>block</th>
-          <th>inline</th>
-          <th>inline-block</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>height determined</th>
-          <td colspan="3">by height of content</td>
-        </tr>
-        <tr>
-          <th>width determined</th>
-          <td>by width of parent element</td>
-          <td colspan="2">by width of content</td>
-        </tr>
-        <tr>
-          <th>Is it possible to set height and width</th>
-          <td>yes</td>
-          <td>no</td>
-          <td>yes</td>
-        </tr>
-        <tr>
-          <th>How line wrapping works</th>
-          <td>always on a new line</td>
-          <td colspan="2">only when filling the width of the parent element</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="example">
+      <label>
+        Date
+        <input type="date" />
+      </label>
+      <label>
+        Time
+        <input type="time" />
+      </label>
+      <label>
+        Date and time
+        <input type="datetime-local" />
+      </label>
+    </div>
+
+    <div class="example">
+      <form>
+        <label>
+          Username
+          <input type="text" name="username" placeholder="Jack Meadows" />
+        </label>
+        <label>
+          Feedback
+          <textarea
+            name="feedback"
+            rows="5"
+            placeholder="Enter your message here..."
+          ></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="example">
+      <label for="size">Size</label>
+      <select id="size" name="size">
+        <option value="xs">Extra Small</option>
+        <option value="s">Small</option>
+        <option value="m" selected>Medium</option>
+        <option value="l">Large</option>
+      </select>
+    </div>
+
+    <div class="example">
+      <label for="month">Month</label>
+      <select name="month" id="month">
+        <optgroup label="Summer">
+          <option value="s6">June</option>
+          <option value="s7">July</option>
+          <option value="s8">August</option>
+        </optgroup>
+        <optgroup label="Autumn">
+          <option value="s9">September</option>
+          <option value="s10">October</option>
+          <option value="s11">November</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div class="example">
+      <label for="fav">Choose your favourite browser</label>
+      <input list="browsers" name="fav" id="fav" />
+      <datalist id="browsers">
+        <option>Edge</option>
+        <option>Firefox</option>
+        <option>Chrome</option>
+        <option>Opera</option>
+        <option>Safari</option>
+      </datalist>
+    </div>
+
+    <div class="example">
+      <label for="state">Choose your state</label>
+      <input type="text" name="state" id="state" list="states" />
+      <datalist id="states">
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+      </datalist>
+    </div>
+
+    <div class="example">
+      <form class="form">
+        <fieldset class="form-group">
+          <legend class="group-title">Enter your contact details</legend>
+          <label class="form-label">
+            Name
+            <input type="text" name="username" />
+          </label>
+          <label class="form-label">
+            Email
+            <input type="email" name="email" />
+          </label>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="group-title">
+            Your favourite programming language
+          </legend>
+          <div class="form-field">
+            <input type="checkbox" name="language" value="python" id="python" />
+            <label class="form-label" for="python">Python</label>
+          </div>
+          <div class="form-field">
+            <input type="checkbox" name="language" value="js" id="js" />
+            <label class="form-label" for="js">JavaScript</label>
+          </div>
+          <div class="form-field">
+            <input type="checkbox" name="language" value="ruby" id="ruby" />
+            <label class="form-label" for="ruby">Python</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="group-title">I want to receive</legend>
+          <div class="form-field">
+            <input
+              type="checkbox"
+              name="newsletter"
+              value="weekly"
+              id="weekly"
+            />
+            <label class="form-label" for="weekly">The weekly newsletter</label>
+          </div>
+          <div class="form-field">
+            <input
+              type="checkbox"
+              name="newsletter"
+              value="offers"
+              id="offers"
+            />
+            <label class="form-label" for="offers"
+              >Offers from the company</label
+            >
+          </div>
+          <div class="form-field">
+            <input
+              type="checkbox"
+              name="newsletter"
+              value="associated_offers"
+              id="associated_offers"
+            />
+            <label class="form-label" for="associated_offers"
+              >Offers from associated companies</label
+            >
+          </div>
+        </fieldset>
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="example">
+      <form class="form">
+        <div
+          class="form-group-too"
+          role="group"
+          aria-labelledby="contact-details-head"
+        >
+          <p id="contact-details-head">Enter your contact details</p>
+          <label>
+            Name
+            <input type="text" name="username" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" />
+          </label>
+        </div>
+
+        <div
+          class="form-group-too"
+          role="group"
+          aria-labelledby="language-head"
+        >
+          <p id="language-head">Your favourite programming language</p>
+          <label>
+            <input type="checkbox" name="language" value="python" />
+            Python
+          </label>
+          <label>
+            <input type="checkbox" name="language" value="js" />
+            JavaScript
+          </label>
+          <label>
+            <input type="checkbox" name="language" value="ruby" />
+            Ruby
+          </label>
+        </div>
+
+        <div
+          class="form-group-too"
+          role="group"
+          aria-labelledby="newsletter-head"
+        >
+          <p id="newsletter-head">I want to receive</p>
+          <label>
+            <input type="checkbox" name="newsletter" value="weekly" />
+            The weekly newsletter
+          </label>
+          <label>
+            <input type="checkbox" name="newsletter" value="company_offers" />
+            Offers from the company
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="newsletter"
+              value="associated_offers"
+            />
+            Offers from associated companies
+          </label>
+        </div>
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
   </body>
 </html>
