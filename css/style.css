@@ -15,6 +15,18 @@ body {
   margin-right: auto;
 }
 
+.modal-input-block {
+}
+.modal-text-box {
+}
+.modal-position {
+  background-color: #3f51b5;
+}
+.modal-icon {
+  stroke: #000;
+  fill: #faf3e7;
+}
+
 .foto {
   margin: 30px;
   width: 525px;
