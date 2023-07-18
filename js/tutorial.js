@@ -1,4 +1,6 @@
-const incomingValue = 0;
-const defaultValue = 10;
-const value = null ?? incomingValue;
-console.log(value);
+let a = 6;
+let b = false;
+let c = '12';
+let d = 1;
+let result = a + d + c + b;
+console.log(result);
